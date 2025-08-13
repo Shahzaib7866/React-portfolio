@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import shahzy from '../assets/shah-logo.png'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import { motion } from 'framer-motion';
 import CloseIcon from '@mui/icons-material/Close';
+
 
 
 

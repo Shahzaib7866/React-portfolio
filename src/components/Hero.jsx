@@ -6,6 +6,7 @@ import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
 
 
 const Hero = () => {
@@ -13,12 +14,14 @@ const Hero = () => {
   return (
 
     <>
-    <div className='flex items-center'>
+    {/* //main div */}
+    <div className='flex items-center justify-between'>
 
-
+{/* sub-main div 1 */}
+<div>
 <motion.div 
 whileInView={{x:[-100,0], opacity:[0,1]}}
-transition={{duration: 0.5}}
+transition={{duration: 0.6}}
 className='m-8'
 >
      
@@ -47,55 +50,48 @@ className='m-8'
        />
       </div>
 
-</motion.div>
-
-
-<motion.div
-whileInView={{x:[0,-100], opacity:[0,1]}}
-transition={{duration: 0.5}}
- className='ml-auto mt-26'>
-    <div className='m-2 inline'>
-        <img className='w-auto h-[240px] rounded-2xl' src={shahzypic} alt='pic' />
-      </div>
-
-</motion.div>
-    </div>
-
-
-<motion.div 
-whileInView={{x:[-100,0], opacity:[0,1]}}
-transition={{duration: 0.5}}
-className='ml-6'
->
-  <p className='text-white ml-4 flex w-[450px] text-lg'>
+  <p className='text-white my-6 flex w-[450px] text-base'>
    I am Shahzaib and I am a JavaScript web Developer.
-I have been working on this field for more than One year.
-• Java <br />
+I have been working on this field for more than One year. <br />
+• Javascript <br />
 • Reactjs <br />
 • Html5 and CSS <br />
 • JavaScript for web development <br />
 • Nodejs
   </p>
 
+     <button className='mt-4 text-white cursor-pointer text-lg'>Let's Connect <ArrowForwardOutlinedIcon className='border rounded-4xl ml-2 cursor-pointer' /></button>
+
 </motion.div>
 
+ </div>
 
-<motion.div 
-whileInView={{x:[-100,0], opacity:[0,1]}}
-transition={{duration: 0.5}}
-className='ml-6'
->
-    <button className='mt-8 text-white ml-4 cursor-pointer text-lg'>Let's Connect <ArrowForwardOutlinedIcon className='border rounded-4xl ml-2 cursor-pointer' /></button>
 
-<div className='ml-4 mt-2 flex items-center text-white'>
-  <LinkedInIcon className='mr-3'/>
-  <GitHubIcon className='mr-3' />
-  <WhatsAppIcon />
+{/* sub-main div 2 */}
+<div>
+<motion.div
+whileInView={{x:[0,-100], opacity:[0,1]}}
+transition={{duration: 0.6}}
+ className='ml-auto mt-26'>
+    <div className='m-2 inline'>
+        <img className='w-auto h-[240px] rounded-2xl mt-4' src={shahzypic} alt='pic' />
+      </div>
+
+      <div className='ml-14 mt-6 flex items-center text-white cursor-pointer'>
+  <LinkedInIcon className='mr-4'/>
+  <GitHubIcon className='mr-4' />
+  <WhatsAppIcon className='mr-4' />
+  <EmailIcon />
 </div>
 
 </motion.div>
+</div>
 
-<span className='border text-gray-500 mt-12 flex'></span>
+
+</div>
+
+
+<span className='border text-gray-500 mt-50 flex'></span>
     </>
 
 

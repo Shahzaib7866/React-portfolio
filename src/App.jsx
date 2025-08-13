@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import About from './components/About'
 
 
 
@@ -9,9 +10,10 @@ import Contact from './components/Contact'
 function App() {
 
   return (
-    <div className='w-full h-screen bg-gray-800'>
+    <div className='w-full min-h-screen bg-gray-800'>
    <Navbar />
    <Hero />
+   <About />
    <Projects />
    <Contact />
 
