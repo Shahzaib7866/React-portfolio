@@ -45,7 +45,7 @@ const Navbar = () => {
 {['Home', 'About', 'Work', 'Skills', 'Contact'].map
 ((item) =>(
   <li key={`link-${item}`}>
- <a href={`${item}`} className="text-gray-200 group relative inline-block hover:font-bold">
+ <a href={`${item}`} className="text-gray-200 group relative inline-block hover:scale-110">
   {item}
   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
 </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
 </ul>
 
 
-  <button className='transition-all duration-400 ease-in-out text-white cursor-pointer border p-2 mx-4 hover:font-bold'>Email Me</button>
+  <button className='transition-all duration-400 ease-in-out text-white cursor-pointer border p-2 mx-4 hover:scale-110'>Email Me</button>
 
 
 

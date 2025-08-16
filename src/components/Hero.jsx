@@ -7,6 +7,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
+import { Box } from '@mui/material';
+
 
 
 const Hero = () => {
@@ -22,7 +24,7 @@ const Hero = () => {
 <motion.div 
 whileInView={{x:[-100,0], opacity:[0,1]}}
 transition={{duration: 0.6}}
-className='m-8'
+className='m-12'
 >
      
      <div className='flex pt-44'>
@@ -77,11 +79,60 @@ transition={{duration: 0.6}}
         <img className='w-auto h-[240px] rounded-2xl mt-4' src={shahzypic} alt='pic' />
       </div>
 
-      <div className='ml-14 mt-6 flex items-center text-white cursor-pointer'>
-  <LinkedInIcon className='mr-4'/>
-  <GitHubIcon className='mr-4' />
-  <WhatsAppIcon className='mr-4' />
-  <EmailIcon />
+      <div className='ml-7 mt-4 flex items-center text-white cursor-pointer'>
+ <Box
+      className="mr-4"
+      sx={{
+        fontSize: 36,
+        transition: 'transform 0.3s ease-in-out', 
+        '&:hover': {
+        transform: 'scale(1.1)',
+          color: '#2A57A1',
+        },
+      }}
+    >
+      <LinkedInIcon sx={{ fontSize: 'inherit' }} />
+    </Box>
+     <Box
+    className="mr-4"
+      sx={{
+        fontSize: 36,
+        transition: 'transform 0.3s ease-in-out', 
+        '&:hover': {
+        transform: 'scale(1.1)',
+          color: '#2A57A1',
+        },
+      }}
+    >
+        <GitHubIcon sx={{ fontSize: 'inherit' }} />
+    </Box>
+     <Box
+  className="mr-4"
+      sx={{
+        fontSize: 36,
+        transition: 'transform 0.3s ease-in-out', 
+        '&:hover': {
+        transform: 'scale(1.1)',
+          color: '#2A57A1',
+        },
+      }}
+    >
+      <WhatsAppIcon sx={{ fontSize: 'inherit' }} />
+    </Box>
+         <Box
+  className="mr-4"
+      sx={{
+        fontSize: 36,
+        transition: 'transform 0.3s ease-in-out', 
+        '&:hover': {
+        transform: 'scale(1.1)',
+          color: '#2A57A1',
+        },
+      }}
+    >
+      <EmailIcon sx={{ fontSize: 'inherit' }} />
+    </Box>
+
 </div>
 
 </motion.div>
@@ -91,7 +142,7 @@ transition={{duration: 0.6}}
 </div>
 
 
-<span className='border text-gray-500 mt-50 flex'></span>
+   <div className='ml-76 border-t border-gray-700 mt-16 w-full max-w-4xl'></div>
     </>
 
 
