@@ -14,6 +14,21 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+//navbar clickable items
+const handleNavLinkClick = (item) => {
+  const targetId = item.toLowerCase();
+  const element = document.getElementById(targetId);
+
+  if (element) {
+    // Scroll to the element
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    // Update the URL without reloading the page
+    window.history.pushState(null, '', `${targetId}`);
+  }
+};
+         
+//navbar styling
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
       // Scrolling down
@@ -42,19 +57,21 @@ const Navbar = () => {
       </div>
 
       <ul className="flex gap-6 uppercase cursor-pointer font-semibold transition-all duration-600 ease-in-out">
-{['Home', 'About', 'Work', 'Skills', 'Contact'].map
+{['Home', 'About', 'Work', 'Contact'].map
 ((item) =>(
   <li key={`link-${item}`}>
- <a href={`${item}`} className="text-gray-200 group relative inline-block hover:scale-110">
-  {item}
+<div onClick={() => handleNavLinkClick(item)} className="text-gray-200 group relative inline-block hover:scale-110">
+        {item}
   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-</a>
+</div>
   </li>
 ))}
 </ul>
 
 
-  <button className='transition-all duration-400 ease-in-out text-white cursor-pointer border p-2 mx-4 hover:scale-110'>Email Me</button>
+<a href="mailto:shehkhan494@gmail.com" className='transition-all duration-400 ease-in-out text-white cursor-pointer border p-2 mx-4 hover:scale-110'>
+  <button>Email Me</button>
+</a>
 
 
 

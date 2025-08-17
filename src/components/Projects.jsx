@@ -146,7 +146,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center mt-20 px-4'>
+    <div id='work' className='flex flex-col items-center justify-center mt-20 px-4'>
       <h1 className='text-white font-semibold text-2xl mb-2'>
         Projects I have Worked On
       </h1>

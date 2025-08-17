@@ -8,7 +8,7 @@ import FolderCopyIcon from '@mui/icons-material/FolderCopy';
 
 const About = () => {
   return (
-    <>
+    <div id='about'>
     <div className='flex items-center justify-between'>
    <motion.div
   //  initial="hidden" 
@@ -151,7 +151,7 @@ Backend Developments
 </motion.div>
 
    <div className='ml-76 border-t border-gray-700 mt-16 w-full max-w-4xl'></div>    
-   </>
+   </div>
   )
 }
 

@@ -1,6 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 
+
+//for empty fields once send btn clicked
+  // const defaultcontactFormData = {
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // }
+
+
 const Contact = () => {
 
 const [name, setname] = useState("");
@@ -8,21 +17,52 @@ const [email, setemail] = useState('');
 const [message, setmessage] = useState('');
 
 
-const handleSubmission = (e) => {
+const handleSubmission = async (e) => {
   e.preventDefault();
   //object create kr k data laina hai jo backend mein bhej sakyein
-  const contactData = {
+    const contactData = {
     name,
     email,
     message,
   }
 
-  console.log(contactData);
+  //using fetch
+  try {
+    const response = await fetch('http://localhost:8080/api/v1/post' , {
+      method: "POST",
+      headers: {
+    'Content-Type': 'application/json' 
+  },
+  //humain json pass krna hai
+  body: JSON.stringify(contactData)
+    })
+
+  if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+const result = await response.json();
+ if (response.ok) {
+      alert("Message sent successfully");
+      
+      setname('');
+      setemail('');
+      setmessage('');
+
+    } else {
+      alert("Message not sent");
+    }
+
+  } catch (error) {
+    console.log('error submitting form:', error );
+    
+  }
+
 }
 
 
   return (
-    <div className='flex justify-center items-center flex-col mt-20'>
+    <div  id="contact" className='flex justify-center items-center flex-col mt-20'>
       <h1 className='text-white text-2xl italic font-semibold'>
         Let's Build Something Amazing
       </h1>
@@ -61,8 +101,8 @@ const handleSubmission = (e) => {
                 <label htmlFor='usermsg' className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
+
                 <div className="relative">
-                  {/* <MessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" /> */}
                   <textarea
                     name="message"
                     required
@@ -80,7 +120,6 @@ const handleSubmission = (e) => {
                   </div>
 
   <button
-                // onClick={handleSubmit}
                 className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none transition-all duration-300 flex items-center justify-center space-x-3 cursor-pointer"
                 type='submit'
               >
@@ -91,7 +130,6 @@ const handleSubmission = (e) => {
                 </div>
               </form>
            
-      {/* Download CV Button */}
       <div>
             <button
               // onClick={downloadCV}
@@ -102,7 +140,7 @@ const handleSubmission = (e) => {
           </div>
       </div>        
 
-    // </div>
+     </div>
   )
 }
 

@@ -15,7 +15,7 @@ const Hero = () => {
   
   return (
 
-    <>
+    <div id='home'>
     {/* //main div */}
     <div className='flex items-center justify-between'>
 
@@ -80,6 +80,9 @@ transition={{duration: 0.6}}
       </div>
 
       <div className='ml-7 mt-4 flex items-center text-white cursor-pointer'>
+
+  <a href="https://www.linkedin.com/in/shahzaib-ishaq-37262821b/" target="_blank" rel="noopener noreferrer">
+
  <Box
       className="mr-4"
       sx={{
@@ -93,6 +96,10 @@ transition={{duration: 0.6}}
     >
       <LinkedInIcon sx={{ fontSize: 'inherit' }} />
     </Box>
+</a>
+
+<a href="https://github.com/Shahzaib7866"
+target="_blank" rel="noopener noreferrer">
      <Box
     className="mr-4"
       sx={{
@@ -106,6 +113,8 @@ transition={{duration: 0.6}}
     >
         <GitHubIcon sx={{ fontSize: 'inherit' }} />
     </Box>
+</a>
+
      <Box
   className="mr-4"
       sx={{
@@ -119,6 +128,8 @@ transition={{duration: 0.6}}
     >
       <WhatsAppIcon sx={{ fontSize: 'inherit' }} />
     </Box>
+
+    <a href="mailto:shehkhan494@gmail.com">
          <Box
   className="mr-4"
       sx={{
@@ -132,6 +143,7 @@ transition={{duration: 0.6}}
     >
       <EmailIcon sx={{ fontSize: 'inherit' }} />
     </Box>
+    </a>
 
 </div>
 
@@ -143,7 +155,7 @@ transition={{duration: 0.6}}
 
 
    <div className='ml-76 border-t border-gray-700 mt-16 w-full max-w-4xl'></div>
-    </>
+    </div>
 
 
   )
