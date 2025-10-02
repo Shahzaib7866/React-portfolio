@@ -1,15 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 
-
-//for empty fields once send btn clicked
-  // const defaultcontactFormData = {
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // }
-
-
 const Contact = () => {
 
 const [name, setname] = useState("");
@@ -48,18 +39,30 @@ const result = await response.json();
       setname('');
       setemail('');
       setmessage('');
-
     } else {
       alert("Message not sent");
     }
-
   } catch (error) {
     console.log('error submitting form:', error );
     
   }
-
 }
 
+ const downloadCV = () => {
+    // This creates a temporary link element
+    const link = document.createElement('a');
+    
+    // Set the href to the location of your resume in the public folder
+    link.href = '/assets/My-Resume.pdf';
+    
+    // Set the download attribute to specify the filename
+    link.download = 'My-Resume.pdf';
+    
+    // Append the link to the body, click it, and then remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div  id="contact" className='flex justify-center items-center flex-col mt-20'>
@@ -128,23 +131,40 @@ const result = await response.json();
           
               </button>
                 </div>
-              </form>
+            </form>
            
       <div>
             <button
-              // onClick={downloadCV}
+              onClick={downloadCV}
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 group mt-10 cursor-pointer"
             >
               <span className="text-lg">Download My Resume</span>
             </button>
-          </div>
+      </div>
+      
       </div>        
-
      </div>
   )
 }
 
 export default Contact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

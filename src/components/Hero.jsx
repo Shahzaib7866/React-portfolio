@@ -32,22 +32,22 @@ className='m-12'
      <span className='text-xl'>👋</span>
      </div>
 
-     <div className='mt-3 text-white text-xl inline'>
-      
+     <div className='mt-3 text-white text-xl inline'> 
+      <h5>Hi! I am Shahzaib,</h5>
      <TypeAnimation
       sequence={[
-        "Hi I'm Shahzaib, a Web Developer",
+        "a Web Developer",
         2000,
-        "Hi I'm Shahzaib, an UI/UX Designer",
+        "an UI/UX Designer",
         2000,
-        "Hi I'm Shahzaib, a React Native Developer",
+        "a React Native Developer",
         2000,
-        "Hi I'm Shahzaib, a SQA Engineer",
+        "a SQA Engineer",
         2000
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '2em', display: 'inline-block' }}
+      style={{ fontSize: '2em', display: 'inline-block', color: '#22519D' }}
       repeat={Infinity}
        />
       </div>
@@ -65,9 +65,7 @@ I have been working on this field for more than One year. <br />
      <button className='mt-4 text-white cursor-pointer text-lg'>Let's Connect <ArrowForwardOutlinedIcon className='border rounded-4xl ml-2 cursor-pointer' /></button>
 
 </motion.div>
-
  </div>
-
 
 {/* sub-main div 2 */}
 <div>
@@ -75,6 +73,8 @@ I have been working on this field for more than One year. <br />
 whileInView={{x:[0,-100], opacity:[0,1]}}
 transition={{duration: 0.6}}
  className='ml-auto mt-26'>
+
+
     <div className='m-2 inline'>
         <img className='w-auto h-[240px] rounded-2xl mt-4' src={shahzypic} alt='pic' />
       </div>
@@ -100,6 +100,7 @@ transition={{duration: 0.6}}
 
 <a href="https://github.com/Shahzaib7866"
 target="_blank" rel="noopener noreferrer">
+
      <Box
     className="mr-4"
       sx={{
@@ -130,7 +131,8 @@ target="_blank" rel="noopener noreferrer">
     </Box>
 
     <a href="mailto:shehkhan494@gmail.com">
-         <Box
+
+    <Box
   className="mr-4"
       sx={{
         fontSize: 36,
@@ -152,10 +154,8 @@ target="_blank" rel="noopener noreferrer">
 
 
 </div>
-
-
-   <div className='ml-76 border-t border-gray-700 mt-16 w-full max-w-4xl'></div>
-    </div>
+   <div className='ml-76 border-t border-gray-700 mt-28 w-full max-w-4xl'></div>
+</div>
 
 
   )
