@@ -33,9 +33,8 @@ export default function Hero() {
               <TypeAnimation
                 sequence={[
                   " Web Developer", 2000,
-                  " UI/UX Designer", 2000,
                   " React Native Developer", 2000,
-                  " SQA Engineer", 2000
+                  " Manual Tester", 2000
                 ]}
                 wrapper="span"
                 speed={50}
